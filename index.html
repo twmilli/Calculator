@@ -1,23 +1,16 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Free Code Camp Calculator Project </title>
 
-<div class="home">
+    <link rel="stylesheet" type="text/css" href = "css/main.css">
 
-  <h1 class="page-heading">Posts</h1>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <script src="js/main.js"></script>
+    <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  </head>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+  <h1> Javascript Calculator </h1>
+</html>
