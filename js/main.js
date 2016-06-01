@@ -47,7 +47,7 @@ function evaluate() {
 
 }
 
-function valid_input(myfield, e, dec) {
+function valid_input(e) {
     var key;
     var keychar;
 
@@ -68,6 +68,8 @@ function valid_input(myfield, e, dec) {
 
     else if (key == null ||
         ("0123456789.*/+-()").indexOf(keychar) > -1) {
+        var disp = $("#display");
+        disp.val(disp.val() + keychar);
         return true;
     } else {
         return false;
@@ -76,8 +78,13 @@ function valid_input(myfield, e, dec) {
 
 function returnKey(evt){
   evt.preventDefault();
+
   var evt = (evt) ? evt: ((event)? event : null);
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
   if (evt.keyCode == 13){
     evaluate();
+  }
+  else if (node.type == "text"){
+    valid_input(null, evt, null);
   }
 }
